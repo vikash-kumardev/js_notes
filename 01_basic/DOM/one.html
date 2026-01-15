@@ -13,8 +13,18 @@
 </head>
 <body class="big-black">
     <div>
-        <h1 id="title" class="heading">DOM learning on my self</h1>
+        <h1 id="title" class="heading">DOM learning on my self <span style="display: none;">test text</span></h1>
+        <h1>Lorem ipsum dolor.</h1>
+        <h1>Lorem ipsum dolor.</h1>
+        <h2>Lorem ipsum dolor.</h2>
         <p> pov mj ki</p>
+        <input type="password" name ="" id="">
+        <ul>
+            <li>one</li>
+            <li>Two</li>
+            <li>Three</li>
+            <li>fourth</li>
+        </ul>
     </div>
     
 </body>
@@ -51,4 +61,93 @@ title.style.padding='15px'
 title.style.borderRadius="5px" (ye jo last ka charo core hota h hlka cut ho jayega)
     <h1 style="color:blue" id="title" class="heading">DOM learning on my self</h1>(html me ese likhte h)
 
+
+    CONSOLE ME HI YE BHI KAM HOHA
+
+   1 #innerText, 2#textContent, 3.innerHtml
+
+   1. innerText ->(ye wahi dikhayega jo code live visible honge )
+    ex->  <h1 id="title" class="heading">DOM learning on my self<span>test text</h1>
+
+2. textContext -> (ye sare dikhayega jo aapn display:none kr chuke honge wh bhi)
+
+3.innerHtml -> (ye pura code show karega html wal jiska aap dekhna chah rhe ho ex - title ka dekh rhe ho to pura 
+html title wala show hoga)
+
+
+##. document.querySelector
+(iska kam h jo tum search kroge wahi dikha de sirf wahi ek)
+
+**.example- document.querySelector('h1')
+yaha h1 ka line dikh jayega 
+
+**. document.querySeletor('#title')
+yaha id ka title dikh jayega #->ka use id ke liye krte h 
+
+**.document.querySelector('.heading')
+yaha heading dikha jayega class ka .-> dot se class ko likha jata h 
+
+##.  ab hm input attribute dekh skte h 
+document.querySelector('input[type="password"]')
+
+
+AB AATE H HM EK UL PR BAT KRTE H 
+** document.querySelector('ul')
+**. const myul=document.querySelector('ul')
+isko variable ke andar rakh liye 
+**. myul.querySelector('li')
+**. const turnGreen=myul.querySelector('li')
+ab isko bhi variable ke andar rakh liye
+turnGreen.style.backgroundColor="Green"
+turnGreen.style.padding="10px"
+
+ab ye ul ka phla green aur padding 10px ho jayega ab sara kam aap console me kr rhe honge
+
+##AB MAN LO KISI WAJAH SE MERE ONE KO FIVE BANANA H TO ESE KRENGE
+**. turnGreen.innerText + enter
+    turnGreen.innerText = 'five'
+
+    AB WH ONE CHANGE HOKAR FIVE HO JAYEGA ESE DOM KO MENUPLATE KRTE H
+
+    ####.  AB AATE H HM DOCUMENT.QUERYSELECTORALL() KI KAHANI PR
+      **. document.querySlectoorAll('li')
+      const tempLiList=document.querySlectoorAll('li')
+      temLiList[0].style.color=green
+      AGAIN:->
+      const myH1=document.querySelectorAll('h1')
+      myH1[0].style.color='green'
+  explain:->
+  myH1 ko batana pdega ki kaun sa isliye 0,1,2,3 jo change kena ko use dale 
+
+
+ ##. FOREACH PR AATE H AB
+  tempLiList + enter
+  tempLiList.forEach(function(li){
+  l.style.backgroundColor='green'
+  })
+
+
+  ##.  document.getElementsByClassName('list-item') + Enter
+  const tempClassList=document.getElementsByClassName('list-item')
+  tempClassList forEach(function(li){
+  consoe.log(li)
+  })
+  yeh error dikhayega kyuki iske node me forEach h hi nhi to ise sahi karne ke liye phle hm
+  is html collectoin ko convert karna padega phle 
+
+  convert krne ka tarika 
+  **. temClassList  + enter
+
+  **. Array.from(temClassList) + enter 
+
+  array ka A captical rahega yad rakhna ab ye array me change ho gya h
+
+  ab aage
+  **. myConvertedArray= Array.from(temClassList) + Enter
+  myconvertedarray (yaha show hoga)
+
+  ab mere pas wh sara data h jisse hm change kr skte h aap ya to map se change kr lijiye ya fir foreach se
+  **. myCovertedarray.forEach(function(li){
+      li.style.color='orange'
+  })
 -->
